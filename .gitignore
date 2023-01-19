@@ -1,2 +1,4 @@
 node_modules
-notes-app-backend-webserver.pem 
+notes-app-backend-webserver.pem
+.env
+.prod.env
