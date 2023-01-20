@@ -16,7 +16,6 @@ class NotesHandler {
 		try {
 			this._validator.validateNotePayload(request.payload);
 			const { title = 'untitled', body, tags } = request.payload;
-
 			const noteId = await this._service.addNote({ title, body, tags });
 
 			const response = h.response({
@@ -94,7 +93,6 @@ class NotesHandler {
 		try {
 			this._validator.validateNotePayload(request.payload);
 			const { id } = request.params;
-
 			await this._service.editNoteById(id, request.payload);
 
 			return {
